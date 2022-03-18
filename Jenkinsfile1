@@ -1,0 +1,23 @@
+pipeline {
+    agent any 
+    stages{
+        stage('Git clone'){
+            steps{
+                git 'https://github.com/dodzi2022/sampleJenkinsProject.git'
+            }
+        }
+        
+        stage('Test'){
+            steps{
+                echo "Testing completed "
+            }
+        }
+        
+        stage('Build'){
+            steps{
+                echo "Build completed "
+            }
+        }
+    }
+    
+}
